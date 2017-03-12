@@ -1,9 +1,0 @@
-/node_modules
-/dist
-/dist.zip
-/npm-debug.log
-/.tmp
-/.sass-cache
-/bower_components
-.idea/
-/git-bash.exe.lnk
