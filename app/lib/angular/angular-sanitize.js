@@ -87,19 +87,19 @@
      </doc:source>
      <doc:scenario>
        it('should sanitize the html snippet ', function() {
-         expect(using('#html-filter').element('div').html()).
+         expect(using('#html-filter').element('div')home.html()).
            toBe('<p>an html\n<em>click here</em>\nsnippet</p>');
        });
 
        it('should escape snippet without any filter', function() {
-         expect(using('#escaped-html').element('div').html()).
+         expect(using('#escaped-html').element('div')home.html()).
            toBe("&lt;p style=\"color:blue\"&gt;an html\n" +
                 "&lt;em onmouseover=\"this.textContent='PWN3D!'\"&gt;click here&lt;/em&gt;\n" +
                 "snippet&lt;/p&gt;");
        });
 
        it('should inline raw snippet if filtered as unsafe', function() {
-         expect(using('#html-unsafe-filter').element("div").html()).
+         expect(using('#html-unsafe-filter').element("div")home.html()).
            toBe("<p style=\"color:blue\">an html\n" +
                 "<em onmouseover=\"this.textContent='PWN3D!'\">click here</em>\n" +
                 "snippet</p>");
@@ -108,7 +108,7 @@
        it('should update', function() {
          input('snippet').enter('new <b>text</b>');
          expect(using('#html-filter').binding('snippet')).toBe('new <b>text</b>');
-         expect(using('#escaped-html').element('div').html()).toBe("new &lt;b&gt;text&lt;/b&gt;");
+         expect(using('#escaped-html').element('div')home.html()).toBe("new &lt;b&gt;text&lt;/b&gt;");
          expect(using('#html-unsafe-filter').binding("snippet")).toBe('new <b>text</b>');
        });
      </doc:scenario>

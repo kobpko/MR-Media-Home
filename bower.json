@@ -1,0 +1,33 @@
+{
+  "name": "MR-Media-Home",
+  "homepage": "https://github.com/kobpko/MR-Media-Home",
+  "authors": [
+    "kobpko <zhangjiaqi121@126.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.4.0",
+    "angular-cookies": "^1.4.0",
+    "angular-messages": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-smart-table": "~2.1.6",
+    "ng-file-upload": "~12.0.4",
+    "cryptojslib": "~3.1.2",
+    "font-awesome": "~4.6.3",
+    "angular-i18n": "^1.5.8",
+    "angular-bootstrap": "^2.1.1",
+    "AdminLTE": "admin-lte#^2.3.6",
+    "bootstrap": "^3.3.5"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

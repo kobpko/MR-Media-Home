@@ -826,16 +826,40 @@ input.text:focus {
 	margin-left: auto;
 	margin-right: auto;
 } */
+.work{
+	overflow: hidden;
+	background: url(../img/work-bg.png);
+	padding-bottom: 16px;
+}
+
+.work-title{
+	text-align: center;
+	margin-top: 70px;
+}
+
+.work-text{
+	overflow: hidden;
+}
 
 .level-outro {
 	padding-bottom: 60px;
 	overflow: visible;
 }
 
+.level-fix{
+	position: relative;
+	padding:0 0 0 0	;
+	overflow: hidden;
+	height: 600px;
+}
+
+.level-nopadding{
+	padding:0;
+}
+
 @media ( min-width: 768px ) {
 	.level {
 		padding: 140px 0 160px;
-		padding: 6.364rem 0 7.273rem;
 		text-align: left;
 	}
 	

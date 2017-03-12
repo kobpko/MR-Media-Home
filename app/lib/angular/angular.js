@@ -797,7 +797,7 @@ function toBoolean(value) {
 function startingTag(element) {
   element = jqLite(element).clone();
   try {
-    // turns out IE does not let you set .html() on elements which
+    // turns out IE does not let you set home.html() on elements which
     // are not allowed to have children. So we just ignore it.
     element.html('');
   } catch(e) {}
