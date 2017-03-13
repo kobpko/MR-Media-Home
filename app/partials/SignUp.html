@@ -1,0 +1,57 @@
+<div class="header">
+    <div class="header_cen">
+        <h1 style="font-size: 22px">
+            <span>MRMedia</span>
+            <span>直播业务管理系统（管理后台）</span>
+        </h1>
+    </div>
+    <div class="signmain">
+        <div class="signup_center">
+            <div class="signup_left">
+                <h2>经纪人注册</h2>
+                <form style="margin: 0 0 20px">
+                    <div class="form-group">
+                        <label>真实姓名</label>
+                        <input type="text" class="form-control" ng-model="user.username" placeholder="请输入真实姓名">
+                    </div>
+                    <div class="form-group">
+                        <label>手机号</label>
+                        <input type="tel" class="form-control" ng-model="user.telnumber" placeholder="请输入手机号">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" class="form-control" ng-model="user.password" placeholder="请设置密码">
+                    </div>
+                    <div class="form-group">
+                        <label>确认密码</label>
+                        <input type="password" class="form-control" ng-model="user.passwordrepeat" placeholder="请重新输入密码">
+                    </div>
+                    <div class="form-group">
+                        <label>身份证号码</label>
+                        <input type="text" class="form-control" ng-model="user.idnumber" placeholder="请输入身份证号码">
+                    </div>
+                    <div class="form-group">
+                        <label>导入手持身份证照片</label>
+                        <input type="file" class="file" id="uploadfile">
+                    </div>
+                    <div class="form-group">
+                        <label>支付方式</label>
+                        <select class="form-control">
+                            <option>支付宝</option>
+                            <option>银行卡</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>微信号</label>
+                        <input type="text" class="form-control" ng-model="user.wechatnumber" placeholder="请输入微信号">
+                    </div>
+                    <button type="submit" class="btn btn-primary" ng-click="login()">注册</button>
+                </form>
+            </div>
+            <div class="signup_right">
+                <img src="img/v2/iphone-bg-lg.min.png">
+            </div>
+        </div>
+    </div>
+
+</div>
