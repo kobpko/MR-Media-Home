@@ -15,7 +15,6 @@ mrmedia.
       $scope.user = {
           password : 'asdf'
       };
-
       // 文件上传框
       $("#uploadfile").fileinput({
           language: 'zh', //设置语言
