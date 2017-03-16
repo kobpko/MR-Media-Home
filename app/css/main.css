@@ -899,6 +899,11 @@ input.text:focus {
 	margin-left: 30px;
 }
 
+.signup_left form{
+	float: left;
+	width: 400px;
+}
+
 .sign_right{
 	float: right;
 	width: 450px;
