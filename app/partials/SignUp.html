@@ -1,35 +1,65 @@
 <div ng-controller="SignupCtrl">
     <div class="header">
     <div class="header_cen">
-        <h1 style="font-size: 22px">
+        <h1 style="font-size: 22px;display: inline-block">
             <span>MRMedia</span>
             <span>直播业务管理系统（管理后台）</span>
         </h1>
+        <h2 style="display: inline-block;float: right;font-size: 18px">
+            <a href="#/home">回到首页</a>
+        </h2>
     </div>
     <div class="signmain">
         <div class="signup_center">
             <div class="signup_left">
                 <h2>经纪人注册</h2>
-                <form style="margin: 0 0 20px">
+                <form name="signupForm" novalidate style="margin: 0 0 20px">
                     <div class="form-group">
                         <label>帐号</label>
-                        <input type="text" class="form-control" ng-model="user.username" placeholder="请输入一个昵称">
+                        <input type="text" name="username" class="form-control" ng-model="user.username" placeholder="请输入一个昵称" required>
+                        <div ng-show="signupForm.$submitted || signupForm.username.$touched">
+                            <span style="color:red">
+                                <span ng-show="signupForm.username.$error.required">帐号是必须的。</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>真实姓名</label>
-                        <input type="text" class="form-control" ng-model="user.realname" placeholder="请输入真实姓名">
+                        <input type="text" class="form-control" name= "user" ng-model="user.realname" placeholder="请输入真实姓名" required>
+                        <div ng-show="signupForm.$submitted || signupForm.user.$touched">
+                            <span style="color:red">
+                                <span ng-show="signupForm.user.$error.required">真实姓名是必须的。</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>手机号</label>
-                        <input type="tel" class="form-control" ng-model="user.telnumber" placeholder="请输入手机号">
+                        <input type="tel" name = "tel" class="form-control" ng-model="user.telnumber" placeholder="请输入手机号" required>
+                        <div ng-show="signupForm.$submitted || signupForm.tel.$touched">
+                            <span style="color:red">
+                                <span ng-show="signupForm.tel.$error.required">手机号是必须的。</span>
+                                <span ng-show="user.telnumber.length!=11">手机号必须为11位。</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>密码</label>
-                        <input type="password" class="form-control" ng-model="user.password" placeholder="请设置密码">
+                        <input type="password" name="pwd" class="form-control" ng-model="user.password" placeholder="请设置密码" required>
+                        <div ng-show="signupForm.$submitted || signupForm.pwd.$touched">
+                            <span style="color:red">
+                                <span ng-show="signupForm.pwd.$error.required">密码是必须的。</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>确认密码</label>
-                        <input type="password" class="form-control" ng-model="user.passwordrepeat" placeholder="请重新输入密码">
+                        <input type="password" name="repwd" class="form-control" ng-model="user.passwordrepeat" placeholder="请重新输入密码" required>
+                        <div ng-show="signupForm.$submitted || signupForm.repwd.$touched">
+                            <span style="color:red">
+                                <span ng-show="signupForm.repwd.$error.required">确认密码是必须的。</span>
+                                <span ng-show="user.passwordrepeat!=user.password">两次输入密码必须相同。</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label>身份证号码</label>
@@ -52,44 +82,44 @@
                         <input type="text" class="form-control" ng-model="user.wechatnumber" placeholder="请输入微信号">
                     </div>
                     <!--pic upload.-->
-                    <div class="avatar-body">
-                        <div class="avatar-upload">
-                            <input class="avatar-src" name="avatar_src" type="hidden">
-                            <input class="avatar-data" name="avatar_data" type="hidden">
-                            <label for="avatarInput">图片上传</label>
-                            <input class="avatar-input" id="avatarInput" name="avatar_file" type="file"></div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="avatar-wrapper">
-                                    <img id="avatarImg" src="img/right.png" style="max-width: 100%;">
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="avatar-preview preview-lg"></div>
-                                <div class="avatar-preview preview-md"></div>
-                                <div class="avatar-preview preview-sm"></div>
-                            </div>
-                        </div>
-                        <div class="row avatar-btns">
-                            <div class="col-md-9">
-                                <div class="btn-group">
-                                    <button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
-                                </div>
-                                <div class="btn-group">
-                                    <button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
-                            </div>
-                        </div>
-                    </div>
+                    <!--<div class="avatar-body">-->
+                        <!--<div class="avatar-upload">-->
+                            <!--<input class="avatar-src" name="avatar_src" type="hidden">-->
+                            <!--<input class="avatar-data" name="avatar_data" type="hidden">-->
+                            <!--<label for="avatarInput">图片上传</label>-->
+                            <!--<input class="avatar-input" id="avatarInput" name="avatar_file" type="file"></div>-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="avatar-wrapper">-->
+                                    <!--<img id="avatarImg" src="img/right.png" style="max-width: 100%;">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-3">-->
+                                <!--<div class="avatar-preview preview-lg" id="target"></div>-->
+                                <!--<div class="avatar-preview preview-md"></div>-->
+                                <!--<div class="avatar-preview preview-sm"></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="row avatar-btns">-->
+                            <!--<div class="col-md-9">-->
+                                <!--<div class="btn-group">-->
+                                    <!--<button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>-->
+                                <!--</div>-->
+                                <!--<div class="btn-group">-->
+                                    <!--<button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-3">-->
+                                <!--<button class="btn btn-success btn-block avatar-save" type="submit" ng-click="upload()"><i class="fa fa-save"></i> 保存修改</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
 
                     <button type="submit" class="btn btn-primary" ng-click="signup()">上传我的照片</button>
                 </form>
             </div>
             <div class="signup_right">
-                <img src="img/v2/iphone-bg-lg.min.png">
+                <img src="img/iphone-bg-lg.min.png">
             </div>
         </div>
     </div>

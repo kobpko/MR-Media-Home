@@ -868,6 +868,8 @@ input.text:focus {
 	background-color: #2ca8f7;
 }
 
+
+
 .sign_center{
 	width: 1100px;
 	height: auto;
@@ -1299,7 +1301,7 @@ input.text:focus {
 .iphone-mobile {
 	height: 200px; 
 	width: 100%;
-	background: url("../img/v2/iphone6.min.png") 6% 0 no-repeat;
+	background: url("../img/iphone6.min.png") 6% 0 no-repeat;
 	background-size: auto 100%; 
 }
 

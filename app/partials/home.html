@@ -31,9 +31,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-6 level-nopadding">
-                <image src="img/join.jpg"></image>
+                <image ng-src="img/{{img.join}}"></image>
                 <div style="position:absolute;width:100%;height:100%;z-indent:2;left:20%;top:60%;">
-                    <a href="#/login"><image src="img/add.png"></image></a>
+                    <a href="#/login"><image ng-src="img/{{img.add}}"></image></a>
                 </div>
             </div>
             <div class="level-nopadding col-xs-6">
@@ -47,15 +47,15 @@
                     <!-- Carousel项目 -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="img/slide-1.jpg" alt="First slide">
+                            <img ng-src="img/{{img.img_slide1}}" alt="First slide">
 
                         </div>
                         <div class="item">
-                            <img src="img/slide-2.jpg" alt="Second slide">
+                            <img ng-src="img/{{img.img_slide2}}" alt="Second slide">
 
                         </div>
                         <div class="item">
-                            <img src="img/slide-3.jpg" alt="Third slide">
+                            <img ng-src="img/{{img.img_slide3}}" alt="Third slide">
 
                         </div>
                     </div>
@@ -168,11 +168,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="work-title">
-                    <image src="img/work-title.png"/>
+                    <image ng-src="img/{{img.work_title}}"/>
                 </div>
                 <div class="work-text work-title">
                     <h2 style="	color: rgb(155, 155, 155);font-size: 24px;">
-                        三块地建房格拉斯丢给分开us的
+                        这里放上一些介绍
                     </h2>
                 </div>
             </div>
@@ -182,7 +182,7 @@
 <div class="level level-img-right">
 
     <div class="container xs-mb-30">
-        <img class=img-right-sprite src="img/v2/iphone-bg-lg.min.png" alt>
+        <img class=img-right-sprite ng-src="img/{{img.iphone_1}}" alt/>
         <div class="row mb-60 xs-mb-20">
             <div class="col-sm-6 col-lg-offset-1 col-lg-5">
                 <h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Details</h1>
@@ -192,7 +192,7 @@
         </div>
 
         <div class="visible-xs xs-mw xs-mb-40">
-            <img src="img/v2/iphone-mobile.min.png" alt>
+            <img ng-src="img/{{img.iphone_2}}" alt/>
         </div>
 
         <div class="row mb-60 xs-mb-20">
