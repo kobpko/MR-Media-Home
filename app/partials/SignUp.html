@@ -13,7 +13,7 @@
         <div class="signup_center">
             <div class="signup_left">
                 <h2>经纪人注册</h2>
-                <form name="signupForm" novalidate style="margin: 0 0 20px">
+                <form name="signupForm" novalidate style="margin: 0 0 20px" ng-submit="signup()">
                     <div class="form-group">
                         <label>帐号</label>
                         <input type="text" name="username" class="form-control" ng-model="user.username" placeholder="请输入一个昵称" required>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                         <label>导入手持身份证照片</label>
-                        <input type="file" class="file" id="uploadfile">
+                        <input type="file" class="file" id="uploadfile" ng-model="user.file">
                     </div>
                     <div class="form-group">
                         <label>支付方式</label>
@@ -115,7 +115,7 @@
                         <!--</div>-->
                     <!--</div>-->
 
-                    <button type="submit" class="btn btn-primary" ng-click="signup()">上传我的照片</button>
+                    <button type="submit" class="btn btn-primary" ng-disabled="signupForm.$invalid">上传我的照片</button>
                 </form>
             </div>
             <div class="signup_right">
