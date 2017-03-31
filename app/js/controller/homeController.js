@@ -1,6 +1,8 @@
 /**
  * Created by MSI on 2017/3/16.
  */
+'use strict';
+
 mrmedia.
 controller('HomeCtrl', ['$scope',function($scope) {
     $('#myCarousel').carousel();

@@ -1,6 +1,8 @@
 /**
  * Created by MSI on 2017/3/29.
  */
+'use strict';
+
 mrmedia.controller('ActorSignupCtrl', ['$scope','$http',function($scope,$http) {
     // alert("12345");
     // 文件上传框

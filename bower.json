@@ -25,6 +25,8 @@
     "bootstrap-fileinput": "^4.3.8",
     "cropper": ""
   },
+  "appPath": "app",
+  "moduleName": "App",
   "ignore": [
     "**/.*",
     "node_modules",
