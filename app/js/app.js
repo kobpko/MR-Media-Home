@@ -14,5 +14,6 @@ var mrmedia = angular.module('myApp', ['ngRoute'])
     $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
     $routeProvider.when('/login', {templateUrl: 'partials/logIn.html', controller: 'LoginCtrl'});
     $routeProvider.when('/signup', {templateUrl: 'partials/SignUp.html', controller: 'SignupCtrl'});
+    $routeProvider.when('/actorSignup', {templateUrl: 'partials/actorSignUp.html', controller: 'ActorSignupCtrl'});
     $routeProvider.otherwise({redirectTo: '/home'});
   }]);

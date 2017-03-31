@@ -1,7 +1,7 @@
 /**
- * Created by MSI on 2017/3/16.
+ * Created by MSI on 2017/3/29.
  */
-mrmedia.controller('SignupCtrl', ['$scope','$http',function($scope,$http) {
+mrmedia.controller('ActorSignupCtrl', ['$scope','$http',function($scope,$http) {
     // alert("12345");
     // 文件上传框
     $("#uploadfile").fileinput({
@@ -30,17 +30,17 @@ mrmedia.controller('SignupCtrl', ['$scope','$http',function($scope,$http) {
     }).on("filebatchselected", function(event, files) {
         $(this).fileinput("upload");
     }).on("fileuploaded", function(event, data) {
-            alert('123');
-            if(data.response)
-            {
-                alert('处理成功');
-                var file = data.reader.result;
-                var filename = data.files[0].name;
-                var type = data.files[0].type;
-                var size = data.files[0].type;
-                // we can use ajax.
-            }
-        });
+        alert('123');
+        if(data.response)
+        {
+            alert('处理成功');
+            var file = data.reader.result;
+            var filename = data.files[0].name;
+            var type = data.files[0].type;
+            var size = data.files[0].type;
+            // we can use ajax.
+        }
+    });
 
 
     // $('.avatar-input').change(function(event) {
@@ -92,16 +92,22 @@ mrmedia.controller('SignupCtrl', ['$scope','$http',function($scope,$http) {
         //we have two interface for signup. one for signup,the other for file upload
         //alert('test:' + $scope.user);
         var user = $scope.user;
+        var settleTypes = ['支付宝','银行卡'];
+        var talents = ['吹','拉','弹','唱'];
         var sign = {
             uid: user.username,
             avatar: 'img/join.jpg',
             weChatNumber: user.wechatnumber,
             phoneNumber: user.telnumber,
+            talentType: talents.indexOf(user.talent),
+            location: user.location,
+            settleType: settleTypes.indexOf(user.settletype),
+            settleAccount: user.settleaccount,
             email: user.email,
             idNumber: user.idnumber,
             realName: user.realname
         };
-        var url = "http://10.60.36.16:8080/agent/register" ;
+        var url = "http://10.60.36.16:8080/actor/register" ;
         $http.post(url,sign).then(function(response) {
             //响应成功
             var Info = response.data;

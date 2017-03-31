@@ -42,41 +42,45 @@
                             </span>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label>密码</label>
-                        <input type="password" name="pwd" class="form-control" ng-model="user.password" placeholder="请设置密码" required>
-                        <div ng-show="signupForm.$submitted || signupForm.pwd.$touched">
-                            <span style="color:red">
-                                <span ng-show="signupForm.pwd.$error.required">密码是必须的。</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>确认密码</label>
-                        <input type="password" name="repwd" class="form-control" ng-model="user.passwordrepeat" placeholder="请重新输入密码" required>
-                        <div ng-show="signupForm.$submitted || signupForm.repwd.$touched">
-                            <span style="color:red">
-                                <span ng-show="signupForm.repwd.$error.required">确认密码是必须的。</span>
-                                <span ng-show="user.passwordrepeat!=user.password">两次输入密码必须相同。</span>
-                            </span>
-                        </div>
-                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label>密码</label>-->
+                        <!--<input type="password" name="pwd" class="form-control" ng-model="user.password" placeholder="请设置密码" required>-->
+                        <!--<div ng-show="signupForm.$submitted || signupForm.pwd.$touched">-->
+                            <!--<span style="color:red">-->
+                                <!--<span ng-show="signupForm.pwd.$error.required">密码是必须的。</span>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label>确认密码</label>-->
+                        <!--<input type="password" name="repwd" class="form-control" ng-model="user.passwordrepeat" placeholder="请重新输入密码" required>-->
+                        <!--<div ng-show="signupForm.$submitted || signupForm.repwd.$touched">-->
+                            <!--<span style="color:red">-->
+                                <!--<span ng-show="signupForm.repwd.$error.required">确认密码是必须的。</span>-->
+                                <!--<span ng-show="user.passwordrepeat!=user.password">两次输入密码必须相同。</span>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <div class="form-group">
                         <label>身份证号码</label>
                         <input type="text" class="form-control" ng-model="user.idnumber" placeholder="请输入身份证号码">
                     </div>
                     <div class="form-group">
+                        <label>邮箱</label>
+                        <input type="email" class="form-control" ng-model="user.email" placeholder="请输入邮箱">
+                    </div>
+                    <div class="form-group">
                         <label>导入手持身份证照片</label>
                         <input type="file" class="file" id="uploadfile" ng-model="user.file">
                     </div>
-                    <div class="form-group">
-                        <label>支付方式</label>
-                        <select class="form-control" >
-                            <option>支付宝</option>
-                            <option>银行卡</option>
-                        </select>
-                        <input type="number" class="form-control" ng-model="user.account" placeholder="请输入你的支付账号/银行卡号">
-                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label>支付方式</label>-->
+                        <!--<select class="form-control" >-->
+                            <!--<option>支付宝</option>-->
+                            <!--<option>银行卡</option>-->
+                        <!--</select>-->
+                        <!--<input type="number" class="form-control" ng-model="user.account" placeholder="请输入你的支付账号/银行卡号">-->
+                    <!--</div>-->
                     <div class="form-group">
                         <label>微信号</label>
                         <input type="text" class="form-control" ng-model="user.wechatnumber" placeholder="请输入微信号">
@@ -115,7 +119,7 @@
                         <!--</div>-->
                     <!--</div>-->
 
-                    <button type="submit" class="btn btn-primary" ng-disabled="signupForm.$invalid">上传我的照片</button>
+                    <button type="submit" class="btn btn-primary" ng-disabled="signupForm.$invalid">注册</button>
                 </form>
             </div>
             <div class="signup_right">

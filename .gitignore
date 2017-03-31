@@ -2,3 +2,4 @@ logs/*
 !.gitkeep
 /bower_components
 ~$逻辑.pptx
+node_modules/
